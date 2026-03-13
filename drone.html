@@ -4,11 +4,20 @@
     <title>Drone Gallery | Jdubz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { font-family: 'Helvetica', sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
-        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; }
-        .gallery-item { width: 300px; border: 1px solid #333; border-radius: 15px; overflow: hidden; background: #1e1e1e; }
-        .gallery-item img { width: 100%; height: auto; display: block; }
-        .back-btn { display: inline-block; margin-top: 30px; color: #4db8ff; text-decoration: none; border: 1px solid #4db8ff; padding: 10px 20px; border-radius: 5px; }
+        body
+    font-family: 'Helvetica', sans-serif; 
+    color: white; 
+    text-align: center; 
+    padding: 50px; 
+    min-height: 100vh;
+    margin: 0;
+
+    /* This adds the image and makes sure it covers the whole screen */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This makes the background stay still while you scroll */
     </style>
 </head>
 <body>
