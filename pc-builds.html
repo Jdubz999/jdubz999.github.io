@@ -4,6 +4,7 @@
     <title>PC Builds | Jdubz999</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    /* 1. General Page Settings */
     body { 
         font-family: 'Helvetica', sans-serif; 
         background: #121212; 
@@ -11,8 +12,11 @@
         text-align: center; 
         padding: 50px; 
     }
-    h1 { color: #4db8ff; text-shadow: 0 0 10px #4db8ff; }
     
+    /* 2. Headlines */
+    h1 { color: #4db8ff; text-shadow: 0 0 10px #4db8ff; }
+
+    /* 3. The PC Cards */
     .card { 
         background: #1e1e1e; 
         padding: 20px; 
@@ -22,16 +26,16 @@
         width: 320px; 
         border: 1px solid #333; 
         vertical-align: top;
-        transition: all 0.3s ease; /* This makes the animation smooth */
+        transition: all 0.3s ease; 
     }
 
-    /* THE ANIMATION MAGIC */
     .card:hover { 
-        transform: translateY(-10px); /* Lifts the card up */
-        border-color: #4db8ff; /* Changes border to your blue/green */
-        box-shadow: 0 0 20px rgba(77, 184, 255, 0.4); /* Adds the glow */
+        transform: translateY(-10px); 
+        border-color: #4db8ff; 
+        box-shadow: 0 0 20px rgba(77, 184, 255, 0.4); 
     }
 
+    /* 4. The Buttons */
     .btn { 
         background: #4db8ff; 
         color: white; 
@@ -41,16 +45,21 @@
         display: inline-block; 
         transition: 0.2s;
     }
-    
+
     .btn:hover {
         background: #36a2eb;
-        transform: scale(1.05); /* Slightly grows the button */
+        box-shadow: 0 0 15px #4db8ff; /* Added a glow to the button too! */
+    }
+
+    /* 5. The Footer (This is what you just moved) */
+    .footer { 
+        margin-top: 50px; 
+        width: 100%; 
+        clear: both; 
+        display: block; 
     }
 
     img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
-    
-    /* This container forces the button to stay at the bottom */
-    .footer { margin-top: 50px; width: 100%; clear: both; }
 </style>
 </head>
 <body>
@@ -80,7 +89,9 @@
         <img src="motherboard.jpg.jpeg" alt="First Build">
         <h3>Motherboard</h3>
         <p></strong>Gigabyte DDR4 Motherboard</p>
-    <br>
-    <a href="index.html" class="btn">← Back to Home</a>
+        
+ <div class="footer">
+        <a href="index.html" class="btn">← Back to Home</a>
+    </div>
 </body>
 </html>
