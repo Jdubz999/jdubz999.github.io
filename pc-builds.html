@@ -16,50 +16,56 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 { 
             color: #4db8ff; 
             text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); 
-            font-size: clamp(2rem, 8vw, 3rem); 
+            font-size: 3rem; 
             margin-bottom: 40px;
         }
 
-        /* This container allows them to sit in a row but wrap on mobile */
         .card-container {
-            display: block;
-            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start; /* Keeps the tops of the cards aligned */
+            gap: 15px;
+            width: 100%;
+            max-width: 1400px;
+            flex-wrap: wrap; /* Allows them to drop down on small screens */
         }
 
         .card { 
             background: rgba(30, 30, 30, 0.7); 
             backdrop-filter: blur(10px); 
             -webkit-backdrop-filter: blur(10px);
-            padding: 20px; 
-            border-radius: 25px; 
-            display: inline-block; 
-            margin: 15px; 
-            width: 90%; 
-            max-width: 350px; 
-            vertical-align: top;
+            padding: 15px; 
+            border-radius: 20px; 
+            width: 280px; 
             border: 1px solid rgba(255, 255, 255, 0.1); 
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-align: center;
+            transition: all 0.4s ease;
         }
 
         .card:hover { 
-            transform: translateY(-15px); 
+            transform: translateY(-10px); 
             border-color: #4db8ff; 
+            box-shadow: 0 10px 30px rgba(77, 184, 255, 0.2);
         }
 
-        /* NO MORE CROPPING: Images show their full original shape */
+        /* SHOWS THE FULL IMAGE - NO CROPPING */
         .card img { 
             width: 100%; 
-            height: auto; /* This lets the image be its natural height */
-            border-radius: 15px; 
+            height: auto; 
+            border-radius: 12px; 
             margin-bottom: 15px; 
-            display: block;
         }
+
+        h3 { color: #4db8ff; font-size: 1.1rem; margin-bottom: 5px; }
+        p { font-size: 0.85rem; color: #ccc; margin: 0; }
 
         .btn { 
             background: #4db8ff; 
@@ -68,7 +74,7 @@
             text-decoration: none; 
             border-radius: 12px; 
             display: inline-block; 
-            margin-top: 40px;
+            margin-top: 50px;
             font-weight: bold;
             transition: 0.3s;
         }
