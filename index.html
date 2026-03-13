@@ -3,16 +3,27 @@
 <head>
     <title>Jdubz Portfolio</title>
     <style>
-    body { 
-        font-family: 'Helvetica', sans-serif; 
-        /* This creates a "Spotlight" effect in the center of the screen */
-        background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%); 
-        color: white; 
-        text-align: center; 
-        padding: 50px; 
-        min-height: 100vh;
-        margin: 0;
-    }
+   body { 
+    font-family: 'Helvetica', sans-serif; 
+    color: white; 
+    text-align: center; 
+    padding: 50px; 
+    min-height: 100vh;
+    margin: 0;
+
+    /* 1. The Base Color/Glow */
+    background-color: #121212; 
+    background-image: 
+        /* 2. The Spotlight Glow */
+        radial-gradient(circle at center, rgba(77, 184, 255, 0.1) 0%, transparent 70%),
+        /* 3. The Horizontal Grid Lines */
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
+        /* 4. The Vertical Grid Lines */
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+
+    /* This controls how big the grid squares are (30px by 30px) */
+    background-size: 100% 100%, 30px 30px, 30px 30px;
+}
 
     h1 { 
         color: #4db8ff; 
