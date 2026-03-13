@@ -4,68 +4,70 @@
     <title>PC Builds | Jdubz999</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body { 
-            font-family: 'Helvetica', sans-serif; 
-            color: white; 
-            text-align: center; 
-            padding: 50px 20px 100px 20px; 
-            min-height: 100vh;
-            margin: 0;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    body { 
+        font-family: 'Helvetica', sans-serif; 
+        color: white; 
+        text-align: center; 
+        padding: 50px 20px 100px 20px; 
+        min-height: 100vh;
+        margin: 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-        h1 { color: #4db8ff; text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); font-size: 2.5rem; }
+    h1 { color: #4db8ff; text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); font-size: 2.5rem; }
 
-        .card-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            width: 100%;
-            max-width: 1200px;
-            margin: 30px 0;
-        }
+    .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 30px 0;
+    }
 
-        .card { 
-            background: rgba(30, 30, 30, 0.7); 
-            backdrop-filter: blur(10px); 
-            -webkit-backdrop-filter: blur(10px);
-            padding: 20px; 
-            border-radius: 20px; 
-            width: 320px; 
-            border: 1px solid rgba(255, 255, 255, 0.1); 
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-        }
+    .card { 
+        background: rgba(30, 30, 30, 0.7); 
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px);
+        padding: 20px; 
+        border-radius: 20px; 
+        width: 320px; 
+        border: 1px solid rgba(255, 255, 255, 0.1); 
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+    }
 
-        .card:hover { transform: translateY(-10px); border-color: #4db8ff; }
+    /* THIS PART FIXES THE IMAGES */
+    .card img { 
+        width: 100%; 
+        height: 220px;       /* Forces every image to this height */
+        object-fit: cover;   /* Crops the image so it doesn't look squished */
+        object-position: center; 
+        border-radius: 12px; 
+        margin-bottom: 15px; 
+    }
 
-        .card img { 
-            width: 100%; 
-            height: 250px; 
-            object-fit: cover; 
-            border-radius: 12px; 
-            margin-bottom: 15px; 
-        }
-
-        .btn { 
-            background: #4db8ff; 
-            color: white; 
-            padding: 12px 25px; 
-            text-decoration: none; 
-            border-radius: 10px; 
-            font-weight: bold;
-            transition: 0.3s;
-            margin-top: 20px;
-        }
-        .btn:hover { background: #fff; color: #4db8ff; box-shadow: 0 0 20px #4db8ff; }
-    </style>
+    .btn { 
+        background: #4db8ff; 
+        color: white; 
+        padding: 12px 25px; 
+        text-decoration: none; 
+        border-radius: 10px; 
+        font-weight: bold;
+        transition: 0.3s;
+        margin-top: 20px;
+    }
+    .btn:hover { background: #fff; color: #4db8ff; box-shadow: 0 0 20px #4db8ff; }
+</style>
 </head>
 <body>
     <h1>Custom PC Builds</h1>
