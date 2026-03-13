@@ -3,11 +3,66 @@
 <head>
     <title>Jdubz Portfolio</title>
     <style>
-        body { font-family: 'Helvetica', sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
-        h1 { color: #4682B4; } /* Virginia Tech Orange! */
-        .card { background: #1e1e1e; padding: 20px; border-radius: 15px; display: inline-block; margin: 10px; width: 300px; border: 1px solid #333; }
-        .btn { background:#4682B4; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
-    </style>
+    body { 
+        font-family: 'Helvetica', sans-serif; 
+        /* This creates a "Spotlight" effect in the center of the screen */
+        background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%); 
+        color: white; 
+        text-align: center; 
+        padding: 50px; 
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    h1 { 
+        color: #4db8ff; 
+        text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); 
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    p { color: #888; font-size: 1.2rem; margin-bottom: 40px; }
+
+    .card { 
+        background: #1e1e1e; 
+        padding: 40px 20px; 
+        border-radius: 25px; 
+        display: inline-block; 
+        margin: 20px; 
+        width: 300px; 
+        border: 1px solid #333; 
+        vertical-align: top;
+        /* The cubic-bezier makes it feel like it has "weight" and physics */
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    }
+
+    .card:hover { 
+        transform: translateY(-20px) scale(1.02); 
+        border-color: #4db8ff; 
+        box-shadow: 0 15px 40px rgba(77, 184, 255, 0.3); 
+    }
+
+    .btn { 
+        background: #4db8ff; 
+        color: white; 
+        padding: 14px 25px; 
+        text-decoration: none; 
+        border-radius: 12px; 
+        display: inline-block; 
+        margin-top: 25px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #fff;
+        color: #4db8ff;
+        box-shadow: 0 0 25px #4db8ff;
+        transform: scale(1.05);
+    }
+</style>
 </head>
 <body>
     <h1>Jdubz999 - Creative Technologist</h1>
@@ -16,19 +71,19 @@
     <div class="card">
         <h3>Drone Project</h3>
         <p>FPV Custom Builds & Cinematic Aerial Videography</p>
-        <a href="drone.html" class="btn">Coming Soon</a>
+        <a href="drone.html" class="btn">Explore Edits</a>
     </div>
 
     <div class="card">
         <h3>Figma Designs</h3>
         <p>App UI Concepts</p>
-        <a href="#" class="btn">Coming Soon</a>
+        <a href="#" class="btn">Portfolio Coming Soon</a>
     </div>
 
     <div class="card">
         <h3>Custom PC Builds</h3>
         <p>High-performance workstations for design and rendering</p>
-        <a href="pc-builds.html" class="btn">View</a>
+        <a href="pc-builds.html" class="btn">View My Rigs</a>
     </div>
 </body>
 </html>
