@@ -29,17 +29,21 @@
     p { color: #888; font-size: 1.2rem; margin-bottom: 40px; }
 
     .card { 
-        background: #1e1e1e; 
-        padding: 40px 20px; 
-        border-radius: 25px; 
-        display: inline-block; 
-        margin: 20px; 
-        width: 300px; 
-        border: 1px solid #333; 
-        vertical-align: top;
-        /* The cubic-bezier makes it feel like it has "weight" and physics */
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    }
+    /* This creates the see-through "frosted glass" look */
+    background: rgba(30, 30, 30, 0.7); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); /* Support for Safari */
+    
+    /* Keep your existing padding, border-radius, etc. below this */
+    padding: 40px 20px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+    display: inline-block;
+    margin: 20px;
+    width: 300px;
+    vertical-align: top;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
     .card:hover { 
         transform: translateY(-20px) scale(1.02); 
