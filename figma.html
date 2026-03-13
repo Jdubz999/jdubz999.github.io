@@ -11,7 +11,6 @@
             padding: 50px 20px; 
             min-height: 100vh;
             margin: 0;
-            /* Using the same epic mountain background for consistency */
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
                         url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
@@ -60,13 +59,19 @@
             box-shadow: 0 10px 30px rgba(77, 184, 255, 0.2);
         }
 
-        /* Full-size image styling */
-        .card img { 
-            width: 100%; 
-            height: auto; 
-            border-radius: 15px; 
-            margin-bottom: 15px; 
-            display: block;
+        /* Placeholder for when you add images later */
+        .design-placeholder {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dashed #4db8ff;
+            color: #4db8ff;
+            font-weight: bold;
         }
 
         h3 { color: #4db8ff; margin-bottom: 5px; }
@@ -92,21 +97,21 @@
 
     <div class="card-container">
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?auto=format&fit=crop&w=800&q=80" alt="Design 1">
-            <h3>App Dashboard</h3>
-            <p>Clean, dark-mode interface for data tracking.</p>
+            <div class="design-placeholder">Design Coming Soon</div>
+            <h3>Project Title</h3>
+            <p>Description of your design process and goals.</p>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1618761714954-0b8cd0026356?auto=format&fit=crop&w=800&q=80" alt="Design 2">
-            <h3>Social Concept</h3>
-            <p>Mobile-first social media layout with custom icons.</p>
+            <div class="design-placeholder">Design Coming Soon</div>
+            <h3>Project Title</h3>
+            <p>Description of your design process and goals.</p>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Design 3">
-            <h3>E-Commerce Web</h3>
-            <p>Minimalist shop design focusing on product photography.</p>
+            <div class="design-placeholder">Design Coming Soon</div>
+            <h3>Project Title</h3>
+            <p>Description of your design process and goals.</p>
         </div>
     </div>
 
