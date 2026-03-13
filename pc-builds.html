@@ -5,13 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     /* 1. General Page Settings */
-    body { 
-        font-family: 'Helvetica', sans-serif; 
-        background: #121212; 
-        color: white; 
-        text-align: center; 
-        padding: 50px; 
-    }
+   body { 
+    font-family: 'Helvetica', sans-serif; 
+    color: white; 
+    text-align: center; 
+    padding: 50px; 
+    min-height: 100vh;
+    margin: 0;
+
+    /* This adds the image and makes sure it covers the whole screen */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This makes the background stay still while you scroll */
+}
     
     /* 2. Headlines */
     h1 { color: #4db8ff; text-shadow: 0 0 10px #4db8ff; }
