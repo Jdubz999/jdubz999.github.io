@@ -1,38 +1,121 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Drone Gallery | Jdubz</title>
+    <title>Drone Cinematography | Jdubz999</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body
-    font-family: 'Helvetica', sans-serif; 
-    color: white; 
-    text-align: center; 
-    padding: 50px; 
-    min-height: 100vh;
-    margin: 0;
+        body { 
+            font-family: 'Helvetica', sans-serif; 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px; 
+            min-height: 100vh;
+            margin: 0;
+            /* Using the same cinematic background as Home */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-    /* This adds the image and makes sure it covers the whole screen */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* This makes the background stay still while you scroll */
+        h1 { 
+            color: #4db8ff; 
+            text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); 
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle { color: #ccc; margin-bottom: 40px; font-style: italic; }
+
+        /* The Glassmorphism Gallery Grid */
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .video-card { 
+            background: rgba(30, 30, 30, 0.7); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+            padding: 20px; 
+            border-radius: 20px; 
+            width: 350px; 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
+
+        .video-card:hover { 
+            transform: translateY(-15px) scale(1.03); 
+            border-color: #4db8ff; 
+            box-shadow: 0 15px 40px rgba(77, 184, 255, 0.3); 
+        }
+
+        /* Placeholder for your future drone shots */
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            border: 1px dashed #4db8ff;
+            color: #4db8ff;
+        }
+
+        .btn { 
+            background: #4db8ff; 
+            color: white; 
+            padding: 12px 25px; 
+            text-decoration: none; 
+            border-radius: 10px; 
+            display: inline-block; 
+            font-weight: bold;
+            transition: 0.3s;
+            margin-top: 50px;
+        }
+
+        .btn:hover {
+            background: #fff;
+            color: #4db8ff;
+            box-shadow: 0 0 20px #4db8ff;
+        }
     </style>
 </head>
 <body>
-    <h1>Aerial Cinematography</h1>
-    <p>Custom builds and high-altitude shots.</p>
 
-    <div class="gallery">
-        <div class="gallery-item">
-            <img src="https://picsum.photos/seed/drone1/300/200" alt="Drone Shot 1">
+    <h1>Drone Cinematography</h1>
+    <p class="subtitle">FPV Custom Builds & Cinematic Aerial Videography</p>
+
+    <div class="gallery-container">
+        
+        <div class="video-card">
+            <div class="video-placeholder">Video Coming Soon</div>
+            <h3>Mountain Range Pursuit</h3>
+            <p>Captured with DJI Avata | 4K 60fps</p>
         </div>
-        <div class="gallery-item">
-            <img src="https://picsum.photos/seed/drone2/300/200" alt="Drone Shot 2">
+
+        <div class="video-card">
+            <div class="video-placeholder">Video Coming Soon</div>
+            <h3>Urban FPV Flow</h3>
+            <p>Custom 5" Quad | GoPro Hero 12</p>
         </div>
+
+        <div class="video-card">
+            <div class="video-placeholder">Video Coming Soon</div>
+            <h3>Sunset Coastline</h3>
+            <p>Cinematic slow-shutter flight</p>
+        </div>
+
     </div>
 
-    <a href="index.html" class="back-btn">← Back to Home</a>
+    <a href="index.html" class="btn">← Back to Home</a>
+
 </body>
 </html>
