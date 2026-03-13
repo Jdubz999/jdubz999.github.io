@@ -11,18 +11,12 @@
     min-height: 100vh;
     margin: 0;
 
-    /* 1. The Base Color/Glow */
-    background-color: #121212; 
-    background-image: 
-        /* 2. The Spotlight Glow */
-        radial-gradient(circle at center, rgba(77, 184, 255, 0.1) 0%, transparent 70%),
-        /* 3. The Horizontal Grid Lines */
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), 
-        /* 4. The Vertical Grid Lines */
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-
-    /* This controls how big the grid squares are (30px by 30px) */
-    background-size: 100% 100%, 30px 30px, 30px 30px;
+    /* This adds the image and makes sure it covers the whole screen */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This makes the background stay still while you scroll */
 }
 
     h1 { 
