@@ -8,7 +8,7 @@
             font-family: 'Helvetica', sans-serif; 
             color: white; 
             text-align: center; 
-            padding: 50px 20px; 
+            padding: 50px 20px 100px 20px; 
             min-height: 100vh;
             margin: 0;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -46,7 +46,13 @@
 
         .card:hover { transform: translateY(-10px); border-color: #4db8ff; }
 
-        .card img { width: 100%; border-radius: 12px; margin-bottom: 15px; }
+        .card img { 
+            width: 100%; 
+            height: 250px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            margin-bottom: 15px; 
+        }
 
         .btn { 
             background: #4db8ff; 
@@ -56,31 +62,35 @@
             border-radius: 10px; 
             font-weight: bold;
             transition: 0.3s;
-            margin-top: 30px;
+            margin-top: 20px;
         }
-
         .btn:hover { background: #fff; color: #4db8ff; box-shadow: 0 0 20px #4db8ff; }
     </style>
 </head>
 <body>
-
     <h1>Custom PC Builds</h1>
-    
     <div class="card-container">
         <div class="card">
             <img src="graphics-card.jpg.jpeg" alt="GPU">
             <h3>Graphics Card</h3>
             <p>High-performance rendering powerhouse.</p>
         </div>
-
         <div class="card">
             <img src="motherboard.jpg.jpeg" alt="Motherboard">
             <h3>Motherboard</h3>
             <p>Gigabyte DDR4 - The heart of the build.</p>
         </div>
+        <div class="card">
+            <img src="pc1.jpg.jpeg" alt="PC Build 1">
+            <h3>Full Setup</h3>
+            <p>Completed workstation view.</p>
+        </div>
+        <div class="card">
+            <img src="pc2.jpg.jpeg" alt="PC Build 2">
+            <h3>Interior Detail</h3>
+            <p>Cable management and airflow.</p>
+        </div>
     </div>
-
     <a href="index.html" class="btn">← Back to Home</a>
-
 </body>
 </html>
