@@ -30,8 +30,9 @@
             justify-content: center;
             align-items: flex-start;
             gap: 20px;
-            flex-wrap: nowrap; /* Forces them to stay in a row on big screens */
-            width: 95%;
+            flex-wrap: wrap; /* Keeps them large on desktop, stacks them if screen is too small */
+            width: 100%;
+            max-width: 1800px; /* Allows the row to be very wide */
             margin: 0 auto;
         }
 
@@ -41,12 +42,12 @@
             -webkit-backdrop-filter: blur(10px);
             padding: 20px; 
             border-radius: 25px; 
-            /* This is the change: let the card be wider for bigger pics */
             flex: 1; 
-            min-width: 320px;
-            max-width: 450px; 
+            min-width: 350px; /* Ensures they stay large */
+            max-width: 420px; 
             border: 1px solid rgba(255, 255, 255, 0.1); 
             transition: all 0.4s ease;
+            margin-bottom: 20px;
         }
 
         .card:hover { 
@@ -54,7 +55,6 @@
             border-color: #4db8ff; 
         }
 
-        /* NO SHRINKING: This lets the image be as big as the card allows */
         .card img { 
             width: 100%; 
             height: auto; 
@@ -73,16 +73,11 @@
             text-decoration: none; 
             border-radius: 12px; 
             display: inline-block; 
-            margin-top: 50px;
+            margin-top: 30px;
             font-weight: bold;
             transition: 0.3s;
         }
         .btn:hover { background: white; color: #4db8ff; box-shadow: 0 0 20px #4db8ff; }
-
-        /* Responsive fix for smaller screens so they don't get squished */
-        @media (max-width: 1200px) {
-            .card-container { flex-wrap: wrap; }
-        }
     </style>
 </head>
 <body>
@@ -97,12 +92,6 @@
         </div>
 
         <div class="card">
-            <img src="motherboard.jpg.jpeg">
-            <h3>Motherboard</h3>
-            <p>Gigabyte DDR4 - The heart of the build.</p>
-        </div>
-
-        <div class="card">
             <img src="pc1.jpg.jpeg">
             <h3>Full Setup</h3>
             <p>Completed workstation view.</p>
@@ -112,6 +101,12 @@
             <img src="pc2.jpg.jpeg">
             <h3>Interior Detail</h3>
             <p>Cable management and airflow.</p>
+        </div>
+
+        <div class="card">
+            <img src="motherboard.jpg.jpeg">
+            <h3>Motherboard</h3>
+            <p>Gigabyte DDR4 - The heart of the build.</p>
         </div>
     </div>
 
