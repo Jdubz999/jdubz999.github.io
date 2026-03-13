@@ -16,9 +16,6 @@
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         h1 { 
@@ -30,22 +27,24 @@
 
         .card-container {
             display: flex;
-            flex-direction: row;
             justify-content: center;
-            align-items: flex-start; /* Keeps the tops of the cards aligned */
-            gap: 15px;
-            width: 100%;
-            max-width: 1400px;
-            flex-wrap: wrap; /* Allows them to drop down on small screens */
+            align-items: flex-start;
+            gap: 20px;
+            flex-wrap: nowrap; /* Forces them to stay in a row on big screens */
+            width: 95%;
+            margin: 0 auto;
         }
 
         .card { 
             background: rgba(30, 30, 30, 0.7); 
             backdrop-filter: blur(10px); 
             -webkit-backdrop-filter: blur(10px);
-            padding: 15px; 
-            border-radius: 20px; 
-            width: 280px; 
+            padding: 20px; 
+            border-radius: 25px; 
+            /* This is the change: let the card be wider for bigger pics */
+            flex: 1; 
+            min-width: 320px;
+            max-width: 450px; 
             border: 1px solid rgba(255, 255, 255, 0.1); 
             transition: all 0.4s ease;
         }
@@ -53,19 +52,19 @@
         .card:hover { 
             transform: translateY(-10px); 
             border-color: #4db8ff; 
-            box-shadow: 0 10px 30px rgba(77, 184, 255, 0.2);
         }
 
-        /* SHOWS THE FULL IMAGE - NO CROPPING */
+        /* NO SHRINKING: This lets the image be as big as the card allows */
         .card img { 
             width: 100%; 
             height: auto; 
-            border-radius: 12px; 
+            border-radius: 15px; 
             margin-bottom: 15px; 
+            display: block;
         }
 
-        h3 { color: #4db8ff; font-size: 1.1rem; margin-bottom: 5px; }
-        p { font-size: 0.85rem; color: #ccc; margin: 0; }
+        h3 { color: #4db8ff; margin-bottom: 5px; }
+        p { color: #ccc; font-size: 0.9rem; }
 
         .btn { 
             background: #4db8ff; 
@@ -79,6 +78,11 @@
             transition: 0.3s;
         }
         .btn:hover { background: white; color: #4db8ff; box-shadow: 0 0 20px #4db8ff; }
+
+        /* Responsive fix for smaller screens so they don't get squished */
+        @media (max-width: 1200px) {
+            .card-container { flex-wrap: wrap; }
+        }
     </style>
 </head>
 <body>
