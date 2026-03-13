@@ -2,95 +2,108 @@
 <html>
 <head>
     <title>Jdubz Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    body { 
-        font-family: 'Helvetica', sans-serif; 
-        color: white; 
-        text-align: center; 
-        padding: 50px 20px; 
-        min-height: 100vh;
-        margin: 0;
+        body { 
+            font-family: 'Helvetica', sans-serif; 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px; 
+            min-height: 100vh;
+            margin: 0;
+            /* Cinematic Background */
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            /* Layout Magic */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-        /* Cinematic Background with dark tint for readability */
-        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                    url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1920&q=80');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        h1 { 
+            color: #4db8ff; 
+            text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); 
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            margin-bottom: 10px;
+        }
 
-        /* This makes sure content stays centered and mobile-friendly */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+        .subtitle { color: #ccc; margin-bottom: 40px; font-size: 1.2rem; }
 
-    h1 { 
-        color: #4db8ff; 
-        text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); 
-        font-size: clamp(2rem, 8vw, 3rem); /* Adjusts size based on screen width */
-    }
+        /* THIS IS THE NEW FIX: The box that holds the cards side-by-side */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px 0;
+        }
 
-    /* This works for .card (Home/PC) AND .video-card (Drone) */
-    .card, .video-card { 
-        background: rgba(30, 30, 30, 0.7); 
-        backdrop-filter: blur(10px); 
-        -webkit-backdrop-filter: blur(10px);
-        padding: 30px; 
-        border-radius: 20px; 
-        width: 90%; 
-        max-width: 350px; 
-        margin: 15px; 
-        border: 1px solid rgba(255, 255, 255, 0.1); 
-        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        display: inline-block;
-        vertical-align: top;
-    }
+        .card { 
+            background: rgba(30, 30, 30, 0.7); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px 20px; 
+            border-radius: 25px; 
+            width: 300px; 
+            border: 1px solid rgba(255, 255, 255, 0.1); 
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+        }
 
-    .card:hover, .video-card:hover { 
-        transform: translateY(-15px) scale(1.03); 
-        border-color: #4db8ff; 
-        box-shadow: 0 15px 40px rgba(77, 184, 255, 0.3); 
-    }
+        .card:hover { 
+            transform: translateY(-15px) scale(1.03); 
+            border-color: #4db8ff; 
+            box-shadow: 0 15px 40px rgba(77, 184, 255, 0.3); 
+        }
 
-    .btn { 
-        background: #4db8ff; 
-        color: white; 
-        padding: 12px 25px; 
-        text-decoration: none; 
-        border-radius: 10px; 
-        display: inline-block; 
-        margin-top: 20px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+        .btn { 
+            background: #4db8ff; 
+            color: white; 
+            padding: 14px 25px; 
+            text-decoration: none; 
+            border-radius: 12px; 
+            display: inline-block; 
+            margin-top: 25px;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
 
-    .btn:hover {
-        background: #fff;
-        color: #4db8ff;
-        box-shadow: 0 0 20px #4db8ff;
-    }
-</style>
+        .btn:hover {
+            background: #fff;
+            color: #4db8ff;
+            box-shadow: 0 0 25px #4db8ff;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
+
     <h1>Jdubz999 - Creative Technologist</h1>
-    <p>Drone Cinematography | UI/UX Design | p5.js Art</p>
-    
-    <div class="card">
-        <h3>Drone Project</h3>
-        <p>FPV Custom Builds & Cinematic Aerial Videography</p>
-        <a href="drone.html" class="btn">Explore Edits</a>
+    <p class="subtitle">Drone Cinematography | UI/UX Design | p5.js Art</p>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Drone Project</h3>
+            <p>FPV Custom Builds & Cinematic Aerial Videography</p>
+            <a href="drone.html" class="btn">EXPLORE EDITS</a>
+        </div>
+
+        <div class="card">
+            <h3>Figma Designs</h3>
+            <p>App UI Concepts</p>
+            <a href="#" class="btn">PORTFOLIO COMING SOON</a>
+        </div>
+
+        <div class="card">
+            <h3>Custom PC Builds</h3>
+            <p>High-performance workstations for design and rendering</p>
+            <a href="pc-builds.html" class="btn">VIEW MY BUILDS</a>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>Figma Designs</h3>
-        <p>App UI Concepts</p>
-        <a href="#" class="btn">Portfolio Coming Soon</a>
-    </div>
-
-    <div class="card">
-        <h3>Custom PC Builds</h3>
-        <p>High-performance workstations for design and rendering</p>
-        <a href="pc-builds.html" class="btn">View My Builds</a>
-    </div>
 </body>
 </html>
