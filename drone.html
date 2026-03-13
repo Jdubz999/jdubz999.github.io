@@ -8,7 +8,7 @@
             font-family: 'Helvetica', sans-serif; 
             color: white; 
             text-align: center; 
-            padding: 50px 20px; 
+            padding: 50px 20px 100px 20px; 
             min-height: 100vh;
             margin: 0;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
@@ -20,9 +20,7 @@
             flex-direction: column;
             align-items: center;
         }
-
         h1 { color: #4db8ff; text-shadow: 0 0 20px rgba(77, 184, 255, 0.6); font-size: 2.5rem; }
-
         .card-container {
             display: flex;
             flex-wrap: wrap;
@@ -32,7 +30,6 @@
             max-width: 1200px;
             margin: 30px 0;
         }
-
         .video-card { 
             background: rgba(30, 30, 30, 0.7); 
             backdrop-filter: blur(10px); 
@@ -41,11 +38,9 @@
             border-radius: 20px; 
             width: 320px; 
             border: 1px solid rgba(255, 255, 255, 0.1); 
-            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            transition: 0.3s; 
         }
-
         .video-card:hover { transform: translateY(-10px); border-color: #4db8ff; }
-
         .video-placeholder {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -58,7 +53,6 @@
             border: 1px dashed #4db8ff;
             color: #4db8ff;
         }
-
         .btn { 
             background: #4db8ff; 
             color: white; 
@@ -67,31 +61,28 @@
             border-radius: 10px; 
             font-weight: bold;
             transition: 0.3s;
-            margin-top: 30px;
         }
-
-        .btn:hover { background: #fff; color: #4db8ff; box-shadow: 0 0 20px #4db8ff; }
     </style>
 </head>
 <body>
-
     <h1>Drone Cinematography</h1>
-    
     <div class="card-container">
         <div class="video-card">
             <div class="video-placeholder">Video Coming Soon</div>
             <h3>Mountain Range Pursuit</h3>
             <p>DJI Avata | 4K 60fps</p>
         </div>
-
         <div class="video-card">
             <div class="video-placeholder">Video Coming Soon</div>
             <h3>Urban FPV Flow</h3>
             <p>Custom 5" Quad | GoPro 12</p>
         </div>
+        <div class="video-card">
+            <div class="video-placeholder">Video Coming Soon</div>
+            <h3>Sunset Coastline</h3>
+            <p>Cinematic slow-shutter flight</p>
+        </div>
     </div>
-
     <a href="index.html" class="btn">← Back to Home</a>
-
 </body>
 </html>
