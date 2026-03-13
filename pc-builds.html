@@ -3,15 +3,55 @@
 <head>
     <title>PC Builds | Jdubz999</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* This matches your main page exactly */
-        body { font-family: 'Helvetica', sans-serif; background: #121212; color: white; text-align: center; padding: 50px; }
-        h1 { color: #4db8ff; } /* Your custom blue/green color */
-        .card { background: #1e1e1e; padding: 20px; border-radius: 15px; display: inline-block; margin: 10px; width: 350px; border: 1px solid #333; vertical-align: top; }
-        .btn { background: #4db8ff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 15px; }
-        img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
-        p { color: #ccc; font-size: 0.9em; }
-    </style>
+  <style>
+    body { 
+        font-family: 'Helvetica', sans-serif; 
+        background: #121212; 
+        color: white; 
+        text-align: center; 
+        padding: 50px; 
+    }
+    h1 { color: #4db8ff; text-shadow: 0 0 10px #4db8ff; }
+    
+    .card { 
+        background: #1e1e1e; 
+        padding: 20px; 
+        border-radius: 15px; 
+        display: inline-block; 
+        margin: 15px; 
+        width: 320px; 
+        border: 1px solid #333; 
+        vertical-align: top;
+        transition: all 0.3s ease; /* This makes the animation smooth */
+    }
+
+    /* THE ANIMATION MAGIC */
+    .card:hover { 
+        transform: translateY(-10px); /* Lifts the card up */
+        border-color: #4db8ff; /* Changes border to your blue/green */
+        box-shadow: 0 0 20px rgba(77, 184, 255, 0.4); /* Adds the glow */
+    }
+
+    .btn { 
+        background: #4db8ff; 
+        color: white; 
+        padding: 12px 25px; 
+        text-decoration: none; 
+        border-radius: 8px; 
+        display: inline-block; 
+        transition: 0.2s;
+    }
+    
+    .btn:hover {
+        background: #36a2eb;
+        transform: scale(1.05); /* Slightly grows the button */
+    }
+
+    img { width: 100%; border-radius: 10px; margin-bottom: 10px; }
+    
+    /* This container forces the button to stay at the bottom */
+    .footer { margin-top: 50px; width: 100%; clear: both; }
+</style>
 </head>
 <body>
     <h1>Custom PC Builds</h1>
